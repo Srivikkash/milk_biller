@@ -9,7 +9,7 @@ def history(root):
     TableMargin.pack(side=TOP)
     scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
     scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
-    tree = ttk.Treeview(TableMargin, columns=('sm170', 'sm500', 'sm1l', 'fcm250', 'fcm500', 'fcm1l', 'curd_140', 'curd_500', 'curd_6_cup', 'curd_10 _cup', 'curd_20_cup', 'butter_milk', 'sum'), height=400, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+    tree = ttk.Treeview(TableMargin, columns=('sm170', 'sm500', 'sm1l', 'fcm250', 'fcm500', 'fcm1l', 'curd_140', 'curd_500', 'curd_6_cup', 'curd_10 _cup', 'curd_20_cup', 'butter_milk', 'sum','date_time'), height=400, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
     scrollbary.config(command=tree.yview)
     scrollbary.pack(side=RIGHT, fill=Y)
     scrollbarx.config(command=tree.xview)
@@ -27,21 +27,9 @@ def history(root):
     tree.heading('curd_20_cup', text="curd_20_cup", anchor=W)
     tree.heading('butter_milk', text="butter_milk", anchor=W)
     tree.heading('sum', text="sum", anchor=W)
+    tree.heading('date_time', text="date_time", anchor=W)
 
-    tree.column('#0', stretch=NO, minwidth=0, width=0)
-    tree.column('#1', stretch=NO, minwidth=0, width=200)
-    tree.column('#2', stretch=NO, minwidth=0, width=200)
-    tree.column('#3', stretch=NO, minwidth=0, width=300)
-    tree.column('#4', stretch=NO, minwidth=0, width=300)
-    tree.column('#5', stretch=NO, minwidth=0, width=300)
-    tree.column('#6', stretch=NO, minwidth=0, width=300)
-    tree.column('#7', stretch=NO, minwidth=0, width=300)
-    tree.column('#8', stretch=NO, minwidth=0, width=300)
-    tree.column('#9', stretch=NO, minwidth=0, width=300)
-    tree.column('#10', stretch=NO, minwidth=0, width=300)
-    tree.column('#11', stretch=NO, minwidth=0, width=300)
-    tree.column('#12', stretch=NO, minwidth=0, width=300)
-    tree.column('#13', stretch=NO, minwidth=0, width=300)
+    tree.column('#0', stretch=YES, minwidth=0, width=0)
     tree.pack()
 
     with open('D:\documents\python\milk_product\history .csv') as f:
@@ -61,7 +49,8 @@ def history(root):
             curd_20_cup = row['curd_20_cup']
             butter_milk = row['butter_milk']
             sum = row['sum']
-            tree.insert("", 0, values=(sm170,sm500,sm1l,fcm250,fcm500,fcm1l,curd_140,curd_500,curd_6_cup,curd_10_cup,curd_20_cup,butter_milk,sum))
+            date_time = row['date_time']
+            tree.insert("", 0, values=(sm170,sm500,sm1l,fcm250,fcm500,fcm1l,curd_140,curd_500,curd_6_cup,curd_10_cup,curd_20_cup,butter_milk,sum,date_time))
 def main():
 
     root = Tk()

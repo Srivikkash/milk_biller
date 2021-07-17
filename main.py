@@ -5,6 +5,18 @@ from os import close
 from tkinter.ttk import*
 from tkinter.messagebox import showinfo
 import history_box
+import time
+import datetime
+
+
+today = datetime.date.today()
+
+# dd/mm/YY
+d1 = today.strftime("%d/%m/%Y")
+
+time_1 = time.strftime("%I:%M %p")
+
+dt = [d1,time_1]
 
 class vars:
     def __init__(self) :
@@ -87,7 +99,6 @@ class design(vars):
             fcmtot = ((int(self.txt4.get())*fcm250)+(int(self.txt5.get())*fcm500)+(int(self.txt6.get())*fcm1l))
             curdtot = ((int(self.txt7.get())*c140)+(int(self.txt8.get())*cup50)+(int(self.txt9.get())*cup50)+(int(self.txt10.get())*cup100)+(int(self.txt11.get())*cup200)+(int(self.txt12.get())*bm))
             sum_value = smtot + fcmtot + curdtot
-            print(sum_value)
             Label(self.window,text ="AMOUNT :" + str(sum_value),font="family",).place(x=0,y=255)
         except:
             self.window2 = Toplevel()
@@ -101,7 +112,7 @@ class design(vars):
         try:
             var = [int(self.txt1.get()),int(self.txt2.get()),int(self.txt3.get()),int(self.txt4.get()),int(self.txt5.get()),int(self.txt6.get()),
             int(self.txt7.get()),int(self.txt8.get()),int(self.txt9.get()),int(self.txt10.get()),int(self.txt11.get()),
-            int(self.txt12.get()),sum_value]
+            int(self.txt12.get()),sum_value,dt]
         except:
             self.window2 = Toplevel()
             Label(self.window2,text=" error Enter your calculation and submit it to save").grid(column=0,row=0)
