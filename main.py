@@ -4,7 +4,7 @@ from csv import*
 from os import close
 from tkinter.ttk import*
 from tkinter.messagebox import showinfo
-import history_box 
+import history_box
 
 class vars:
     def __init__(self) :
@@ -72,16 +72,9 @@ class design(vars):
         btn2 = Button(self.window, text="save history",command=self.run)
         btn2.grid(column=6,row=12)
 
-        btn3 = Button(self.window,text="view history",command=history_box.his)
+        btn3 = Button(self.window,text="view history",command=history_box.history)
         btn3.grid(column=7,row=12)
 
-
-
-
-    # def close_win(self):
-    #     self.window2.destroy()
-    #     print('close')
-    #     pass
 
 
     def clicked(self):
@@ -104,7 +97,7 @@ class design(vars):
 
     def run(self):
         vars.__init__(self)
-        cv = open("D:\documents\python\milk_product\history .csv",'a',newline='')
+        cv = open("history .csv",'a',newline='')
         
         try:
             var = [int(self.txt1.get()),int(self.txt2.get()),int(self.txt3.get()),int(self.txt4.get()),int(self.txt5.get()),int(self.txt6.get()),
