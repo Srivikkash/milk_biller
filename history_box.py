@@ -2,11 +2,10 @@ from tkinter import *
 import tkinter.ttk as ttk
 import csv
 
-@classmethod
-def history(self,root):
 
-    self.root = root
-    TableMargin = Frame(self.root, width=500)
+def history(root):
+
+    TableMargin = Frame(root, width=500)
     TableMargin.pack(side=TOP)
     scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
     scrollbary = Scrollbar(TableMargin, orient=VERTICAL)

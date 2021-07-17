@@ -96,7 +96,6 @@ class design(vars):
 
 
     def run(self):
-        vars.__init__(self)
         cv = open("history .csv",'a',newline='')
         
         try:
