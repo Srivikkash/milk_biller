@@ -72,7 +72,7 @@ class design(vars):
         btn2 = Button(self.window, text="save history",command=self.run)
         btn2.grid(column=6,row=12)
 
-        btn3 = Button(self.window,text="view history",command=history_box.history)
+        btn3 = Button(self.window,text="view history",command=history_box.main)
         btn3.grid(column=7,row=12)
 
 
