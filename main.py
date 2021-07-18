@@ -142,6 +142,10 @@ def main():
     y = (screen_height/2) - (height/2)
     window.geometry("%dx%d+%d+%d" % (width, height, x, y))
     window.resizable(0, 0)
+        
+    photo = PhotoImage(file = "images.png")
+    window.iconphoto(False, photo)
+
     app = design(window)
     window.mainloop()
 
