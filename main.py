@@ -11,11 +11,9 @@ import datetime
 
 today = datetime.date.today()
 
-# dd/mm/YY
+# datetime
 d1 = today.strftime("%d/%m/%Y")
-
 time_1 = time.strftime("%I:%M %p")
-
 dt = [d1,time_1]
 
 class vars:
@@ -135,6 +133,15 @@ def main():
     # Create a Frame for border
     window.title(" ")
     window.configure(borderwidth=7, relief="solid",background="#000fff000")
+    
+    width = 365
+    height = 300
+    screen_width = window.winfo_screenwidth()
+    screen_height = window.winfo_screenheight()
+    x = (screen_width/2) - (width/2)
+    y = (screen_height/2) - (height/2)
+    window.geometry("%dx%d+%d+%d" % (width, height, x, y))
+    window.resizable(0, 0)
     app = design(window)
     window.mainloop()
 
