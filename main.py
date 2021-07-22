@@ -147,6 +147,8 @@ def main():
     window.iconphoto(False, photo)
 
     app = design(window)
+
+
     window.mainloop()
 
 
