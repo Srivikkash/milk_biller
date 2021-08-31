@@ -1,7 +1,7 @@
 import json
 
 #opening file and fetch data to variable data
-mf = open("/milk_product/data.json",'r')
+mf = open("data.json",'r')
 
 data = json.load(mf)
 

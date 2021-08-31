@@ -32,7 +32,7 @@ def history(root):
     tree.column('#0', stretch=YES, minwidth=0, width=0)
     tree.pack()
 
-    with open('/milk_product/history .csv') as f:
+    with open('history .csv') as f:
         reader = csv.DictReader(f, delimiter=',')
         for row in reader:
             sm170 = row['sm170']
