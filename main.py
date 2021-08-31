@@ -76,14 +76,14 @@ class design(vars):
         Entry(self.window,textvariable=self.txt12,width=10).grid(column=2, row=11)
 
         
-        btn1 = Button(self.window, text="Submit", command=self.clicked)
-        btn1.grid(column=5, row=12)
+        btn1 = Button(self.window,width=6, text="Submit", command=self.clicked)
+        btn1.grid(column=3, row=12)
     
-        btn2 = Button(self.window, text="save history",command=self.run)
-        btn2.grid(column=6,row=12)
+        btn2 = Button(self.window,width=4, text="save",command=self.run)
+        btn2.grid(column=4,row=12)
 
-        btn3 = Button(self.window,text="view history",command=history_box.main)
-        btn3.grid(column=7,row=12)
+        btn3 = Button(self.window,width=6,text="history",command=history_box.main)
+        btn3.grid(column=5,row=12)
 
 
 
@@ -134,7 +134,7 @@ def main():
     window.title(" ")
     window.configure(borderwidth=7, relief="solid",background="#000fff000")
     
-    width = 365
+    width = 320
     height = 300
     screen_width = window.winfo_screenwidth()
     screen_height = window.winfo_screenheight()
