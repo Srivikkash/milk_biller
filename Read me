@@ -1,0 +1,14 @@
+Here I had created a desktop application for a shops calculation
+It has a customised calculator
+It has save option
+It has history option
+
+Save option used to save calculation 
+  It will save all your present calculation if you needed
+  along with date and time
+
+History option used to display history
+  In lost in fast manner
+  It will display the last entry as first
+
+It has user friendly interface by using python packages
